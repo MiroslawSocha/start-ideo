@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+section header {
+  width: 100%;
+  position: relative;
+  height: 10%;
+  background-color: #023a5c;
+  padding-right: 40px;
+  display: flex;
+  z-index: 2;
+}
+section header .div {
+  width: 25%;
+}
+section header .center {
+  display: flex;
+}
+section header .center .logo {
+  z-index: 0;
+}
+section header .center .logo .img {
+  height: 200%;
+}
+section header .center .navigation {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+section header .center .navigation ul {
+  display: flex;
+}
+section header .center .navigation ul .link {
+  list-style: none;
+  margin: 15px;
+}
+section header .center .navigation ul .link a {
+  text-decoration: none;
+  color: #fff !important;
+  font-size: 24px;
+}
+section header .search-bar {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #fff;
+}
+section header .search-bar input {
+  height: 30px;
+  width: 70%;
+  display: none;
+}
+section main {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  z-index: 0;
+}
+section main #menu {
+  height: 100%;
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 250px;
+  background-color: #fff;
+  z-index: 0;
+  padding: 270px 0 20px 45px;
+  overflow: hidden;
+}
+section main #menu .menu-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  width: 80%;
+}
+section main #menu .menu-list .menu {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 23px;
+  margin-bottom: 20px;
+  border-bottom: 3px dotted #023a5c;
+}
+section main #menu .menu-list .menu li {
+  margin-bottom: 15px;
+  list-style: none;
+}
+section main #menu .menu-list .menu li a {
+  color: #023a5c;
+  text-decoration: none !important;
+}
+section main #menu .menu-list i {
+  color: #023a5c;
+  margin-bottom: 10px;
+}
+section main #menu .hidden-menu {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 10px;
+  z-index: 0;
+  padding-right: 30px;
+  background-color: #fff;
+  height: 100vh;
+  top: -20%;
+}
+section main #menu .hidden-menu i {
+  position: absolute;
+  right: 10px;
+  color: grey;
+  font-size: 20px;
+}
+section main .slider {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: right;
+  left: 0;
+  z-index: -5;
+}
+section main .slider img {
+  width: 100%;
+}
+section main .slider .text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+section main .slider .text h1 {
+  font-size: 35px;
+}
+section main .slider .text p {
+  text-align: right;
+}
+section main .slider .text p a {
+  text-decoration: none;
+  color: #fff;
+}
+section main .slider form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  z-index: 5;
+}
+section main .slider form .control {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+  height: 50px;
+  width: 60%;
+}
+section main .slider form .control * {
+  margin: 5px;
+}
+section main .slider form .control img {
+  height: 46px;
+  width: 54px;
+}
+section main .slider form .control label {
+  background-color: #fff;
+}
+section main .slider form .control input {
+  width: 40%;
+  height: 30px;
+  font-size: 15px;
+}
+section main .slider form .button {
+  padding: 5px;
+  height: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
