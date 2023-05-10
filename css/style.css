@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 body {
@@ -78,9 +78,10 @@ section main #menu {
   position: fixed;
   display: flex;
   top: 0;
+  left: 0;
   width: 250px;
   background-color: #fff;
-  z-index: 0;
+  z-index: 2;
   padding: 270px 0 20px 45px;
   overflow: hidden;
 }
@@ -125,78 +126,209 @@ section main #menu .hidden-menu i {
   right: 10px;
   color: grey;
   font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
-section main .slider {
+section main #slider {
   width: 100vw;
   height: 100%;
   position: relative;
   display: flex;
   overflow: hidden;
   justify-content: right;
-  left: 0;
+  right: 0;
   z-index: -5;
 }
-section main .slider img {
+section main #slider .slider {
   width: 100%;
 }
-section main .slider .text {
+section main #slider .text {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
 }
-section main .slider .text h1 {
+section main #slider .text h1 {
   font-size: 35px;
 }
-section main .slider .text p {
+section main #slider .text p {
   text-align: right;
 }
-section main .slider .text p a {
+section main #slider .text p a {
   text-decoration: none;
   color: #fff;
 }
-section main .slider form {
+section main #slider form {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   bottom: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 766px;
+}
+section main #slider form #control-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+section main #slider form #control-slider .control-slider {
+  height: 20px;
+  width: 40px;
+  margin: 3px;
+  margin-bottom: 5px;
+}
+section main #slider form #control-slider .control-slider:last-child {
+  margin-right: 0;
+}
+section main #slider form .newsletter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 5;
 }
-section main .slider form .control {
+section main #slider form .newsletter .control {
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 7px;
   height: 50px;
-  width: 60%;
+  width: 85%;
 }
-section main .slider form .control * {
+section main #slider form .newsletter .control * {
   margin: 5px;
 }
-section main .slider form .control img {
+section main #slider form .newsletter .control img {
   height: 46px;
   width: 54px;
 }
-section main .slider form .control label {
+section main #slider form .newsletter .control label {
   background-color: #fff;
 }
-section main .slider form .control input {
+section main #slider form .newsletter .control input {
   width: 40%;
   height: 30px;
   font-size: 15px;
 }
-section main .slider form .button {
+section main #slider form .newsletter .button {
   padding: 5px;
   height: 50px;
+  width: 15%;
   background-color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+section .container {
+  width: 1000px;
+  padding: 60px 0;
+}
+section .container .title {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 45px;
+}
+section .container .title img {
+  margin-right: 15px;
+}
+section .container .title h1 {
+  text-transform: uppercase;
+}
+section .container hr {
+  border-width: 0 0 2px 0;
+  margin-bottom: 45px;
+}
+section .blue h1 {
+  color: #fff;
+}
+section .blue hr {
+  border-bottom: dotted #fff;
+}
+section .blue .branze-list {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -9px;
+  width: 1018px;
+  display: flex;
+  flex-wrap: wrap;
+}
+section .blue .branze-list .branch {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin: 0 12px 23px;
+  width: 315px;
+  height: 150px;
+  background: #fff;
+}
+section .blue .branze-list .branch img {
+  width: 315px;
+  height: 150px;
+  overflow: clip;
+}
+section .blue .branze-list .branch .dark-bgc {
+  position: absolute;
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+  width: 101%;
+  height: 110%;
+  top: -2px;
+  left: -2px;
+}
+section .blue .branze-list .branch .dark-bgc:hover {
+  background: rgba(0, 0, 0, 0);
+}
+section .blue .branze-list .branch .dark-bgc:hover h3 {
+  color: #023a5c;
+}
+section .blue .branze-list .branch .dark-bgc h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+section .blue .branze-list .desc {
+  position: relative;
+  margin: 0 12px 23px;
+  width: 315px;
+  font-size: 16px;
+  color: #fff;
+}
+section .blue .branze-list .desc p {
+  text-align: justify;
+  padding-bottom: 45px;
+}
+section .white h1 {
+  color: #023a5c;
+}
+section .white hr {
+  border-bottom: dotted #023a5c;
+}
+
+#branze,
+#produkty,
+#uslugi,
+#aktualnosci,
+#kontakt {
+  display: flex;
+  justify-content: center;
+}
+
+#branze,
+#uslugi,
+#kontakt {
+  position: relative;
+  z-index: -1;
+  background-color: #023a5c;
 }/*# sourceMappingURL=style.css.map */

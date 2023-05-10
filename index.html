@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0f17cf04ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -67,35 +68,155 @@
                 </div>
             </div>
 
-            <div class="slider">
-                <img src="assets/slider/slider2.png" alt="slider">
+            <div id="slider">
+                <img class="slider" src="assets/slider/slider2.png" alt="slider">
                 <div class="text">
                     <h1>SIMPLE <br> - z nami biznes jest prostszy!</h1>
                     <p><a href="#">Dowiedz się więcej</a></p>
                 </div>
 
                 <form>
-                    <div class="control">
-                        <img src="assets/icons/icon-news-pc.png" alt="newsletter">
-                        <label>Chcesz otrzymywać od nas Newsletter?</label>
-                        <input type="email">
+                    <div id="control-slider">
+                        <button class="control-slider" value="1"></button>
+                        <button class="control-slider" value="2"></button>
+                        <button class="control-slider" value="3"></button>
+                        <button class="control-slider" value="4"></button>
                     </div>
-                    <div class="button">
-                        Zapisz się
+                    <div class="newsletter">
+                        <div class="control">
+                            <img src="assets/icons/icon-news-pc.png" alt="newsletter">
+                            <label>Chcesz otrzymywać od nas Newsletter?</label>
+                            <input type="email">
+                        </div>
+                        <div class="button">
+                            Zapisz się
+                        </div>
                     </div>
+
 
                 </form>
             </div>
         </main>
     </section>
     <section id="branze">
-        Branże
+        <div class="container blue">
+            <div class="title">
+                <img src="assets/icons/icon-branze.png" alt="icon">
+                <h1>Branże</h1>
+            </div>
+            <hr>
+            <div class="branze-list">
+                <div class="branch">
+                    <img src="assets/branze/edukacja.png" alt="edukacja">
+                    <div class="dark-bgc">
+                        <h3>Edukacja</h3>
+                    </div>
+
+                </div>
+                <div class="branch">
+                    <img src="assets/branze/transport.png" alt="transport">
+                    <div class="dark-bgc">
+                        <h3>Transport & logistyka</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <img src="assets/branze/produkcja.png" alt="produkcja">
+                    <div class="dark-bgc">
+                        <h3>Produkcja</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <img src="assets/branze/budownictwo.png" alt="budownictwo">
+                    <div class="dark-bgc">
+                        <h3>Budownictwo</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <img src="assets/branze/instytuty.png" alt="instytuty">
+                    <div class="dark-bgc">
+                        <h3>Instytuty</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <img src="assets/branze/medycyna.png" alt="medycyna">
+                    <div class="dark-bgc">
+                        <h3>Medycyna</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <!-- <img src="assets/branze/handel.png" alt="handel"> -->
+                    <div class="dark-bgc">
+                        <h3>Handel</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <!-- <img src="assets/branze/msp.png" alt="msp"> -->
+                    <div class="dark-bgc">
+                        <h3>Msp</h3>
+                    </div>
+                </div>
+                <div class="branch">
+                    <!-- <img src="assets/branze/administracja.png" alt="administracja publiczna"> -->
+                    <div class="dark-bgc">
+                        <h3>Administracja publiczna</h3>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>Simple to znak rozpoznawczy szerokiej rodziny rozwiązań informatycznych wspomagających
+                        zarządzanie obszarami: finansów, obrotu towarowego, personelu, procesów budownictwa, produkcji,
+                        łańcucha dostaw czy relacji z klientami. Od ponad 24 lat dostarczamy wyspecjalizowane usługi
+                        integracji rozwiazań informatycznych i</p>
+                </div>
+                <div class="desc">
+                    <p>doradztwa biznesowego. Nasze produkty i usługi znalazły uznanie ponad 3500 klientów.</p>
+                    <p>Jesteśmy ludźmi, którzy doskonale znają Twój biznes. Opierając się na naszym doświadczeniu
+                        proponujemy rozwiązania, które powstały w oparciu o</p>
+                </div>
+                <div class="desc">
+                    <p>wiedzę zatrudnionych przez nas ekspertów, a które generalnie podnoszą rangę prowadzonych procesów
+                        biznesowych i spełniają specyficzne wymahania przedsiębiorstw poszczególnych branż, zapewniając
+                        możliwość odniesienia sukcesu w coraz silniej konkurencyjnym otoczeniu.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="produkty">Produkty</section>
-    <section id="uslugi">Usługi</section>
-    <section id="aktualnosci">Aktualności</section>
-    <section id="kontakt">Kontakt</section>
+    <section id="produkty">
+        <div class="container white">
+            <div class="title">
+                <img src="assets/icons/icon-produkty.png" alt="icon">
+                <h1>Produkty</h1>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section id="uslugi">
+        <div class="container blue">
+            <div class="title">
+                <img src="assets/icons/tools.png" alt="icon">
+                <h1>Usługi</h1>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section id="aktualnosci">
+        <div class="container white">
+            <div class="title">
+                <img src="assets/icons/icon-aktualnosci.png" alt="icon">
+                <h1>Aktualności</h1>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section id="kontakt">
+        <div class="container blue">
+            <div class="title">
+                <img src="assets/icons/icon-kontakt.png" alt="icon">
+                <h1>Kontakt</h1>
+            </div>
+            <hr>
+        </div>
+    </section>
 
     <script src="app.js"></script>
 </body>
