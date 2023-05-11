@@ -4,7 +4,17 @@ const menu = document.querySelector("#menu");
 const iconToogleMenu = document.querySelector(".icon-toogle-menu");
 let classList = iconToogleMenu.classList;
 const controlsSlider = document.querySelectorAll(".control-slider");
-const slider = document.querySelector(".slider");
+const sliders = document.querySelectorAll(".slider");
+const slider1 = document.querySelector(".slider1");
+const slider2 = document.querySelector(".slider2");
+const slider3 = document.querySelector(".slider3");
+const slider4 = document.querySelector(".slider4");
+
+const aktImgs = document.querySelectorAll(".akt-img");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+let images = [1, 2, 3, 4];
+
 let number = 1;
 
 searchIcon.addEventListener("click", () => {
@@ -39,8 +49,19 @@ function currentImage() {
     for (let i = 0; i < controlsSlider.length; i++) {
         controlsSlider[i].addEventListener("click", (event) => {
             event.preventDefault();
-            let number = event.target.value;
-            slider.src = `assets/slider/slider${number}.png`;
+            number = event.target.value;
+            console.log(number);
+
+
+            // console.log(sliders[i])
+            let left = sliders[number-1].style.left;
+            console.log(left);
+            sliders[number-1].style.left = `1px`;
+            // setInterval()
+            // sliders[!number].style.left = `-100%`;
+
+            // sliders[number].style.left = `assets/slider/slider${number}.png`;
+
             currentImg = number;
         })
 
@@ -51,10 +72,32 @@ function currentImage() {
         if (currentImg > 4) {
             currentImg = 1;
         }
-        slider.src = `assets/slider/slider${currentImg}.png`;
-    }, 3000);
+        slider1.style.left = `calc(${(currentImg - 1) * 100}%`;
+        // slider1.src = `assets/slider/slider${currentImg}.png`;
+        slider2.style.left = `calc(${(currentImg - 1) * 100 - 100}%`;
+        slider3.style.left = `calc(${(currentImg - 1) * 100 - 200}%`;
+        slider4.style.left = `calc(${(currentImg - 1) * 100 - 300}%`;
+    }, 5000);
 
 
+}
+arrowLeft.addEventListener("click", () => {
+    let firstElement = images.shift();
+    images.push(firstElement);
+    aktSlider()
+})
+
+arrowRight.addEventListener("click", ()=> {
+    let lastElement = images.pop();
+    images.splice(0, 0, lastElement);
+    aktSlider()
+})
+
+function aktSlider() {
+    for (let img in aktImgs) {
+        aktImgs[img].src = `assets/aktualnosci/lorem${images[img]}.png`
+        
+    }
 }
 
 currentImage();

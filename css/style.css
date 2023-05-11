@@ -71,7 +71,7 @@ section main {
   width: 100%;
   height: 100%;
   padding-left: 10px;
-  z-index: 0;
+  z-index: 1;
 }
 section main #menu {
   height: 100%;
@@ -140,7 +140,10 @@ section main #slider {
   z-index: -5;
 }
 section main #slider .slider {
+  position: absolute;
   width: 100%;
+  left: 0;
+  transition: left 2s;
 }
 section main #slider .text {
   position: absolute;
@@ -309,11 +312,149 @@ section .blue .branze-list .desc p {
   text-align: justify;
   padding-bottom: 45px;
 }
+section .blue .icons {
+  position: relative;
+  height: 35%;
+  margin-bottom: 100px;
+}
+section .blue .icons .icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .blue .icons .icon p {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+section .blue .icons .icon img {
+  height: 68px;
+}
+section .blue .icons .wdrozenia {
+  top: 0;
+  left: 0;
+}
+section .blue .icons .konsulting {
+  top: 0;
+  right: 0;
+}
+section .blue .icons .szkolenia {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section .blue .icons .doradztwo {
+  bottom: 0;
+  left: 0;
+}
+section .blue .icons .dofinansowanie {
+  bottom: 0;
+  right: 0;
+}
+section .blue .describe {
+  display: flex;
+  margin-bottom: 100px;
+}
+section .blue .describe .desc {
+  width: 50%;
+  margin: 0 12px 23px;
+  font-size: 20px;
+}
+section .blue .describe .desc p {
+  text-align: justify;
+  color: #fff;
+  margin-bottom: 20px;
+}
+section .white {
+  display: flex;
+  flex-direction: column;
+}
 section .white h1 {
   color: #023a5c;
 }
 section .white hr {
   border-bottom: dotted #023a5c;
+}
+section .white .content .describe {
+  display: flex;
+  margin-bottom: 100px;
+}
+section .white .content .describe .desc {
+  width: 50%;
+  margin: 0 12px 23px;
+  font-size: 18.9px;
+}
+section .white .content .describe .desc p {
+  text-align: justify;
+}
+section .white .content .items {
+  width: 100%;
+  height: 100%;
+}
+section .white .content .items .circle {
+  position: relative;
+  float: left;
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background-color: #023a5c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 17px 35px;
+}
+section .white .content .items .circle p:last-child::first-letter {
+  text-transform: lowercase;
+}
+section .white .content .items .circle p {
+  font-size: 21px;
+  text-transform: uppercase;
+  text-align: center;
+}
+section .white .content i {
+  margin: 20px;
+}
+section .white .akt-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+section .white .akt-slider .akt-slide {
+  width: 25%;
+  padding: 10px;
+}
+section .white .akt-slider .akt-slide .circle {
+  position: relative;
+  float: left;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 17px 35px;
+  overflow: hidden;
+  background-position: center;
+}
+section .white .akt-slider .akt-slide .circle img {
+  height: 165px;
+  width: 165px;
+}
+section .white .akt-slider .akt-slide p {
+  color: #023a5c;
+}
+section .white .akt-slider .akt-slide .title-slide {
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+section .white .akt-slider .akt-slide .hr {
+  margin: 5px 0;
+}
+section .white .akt-slider i {
+  font-size: 50px;
+  padding: 10px;
 }
 
 #branze,
@@ -329,6 +470,6 @@ section .white hr {
 #uslugi,
 #kontakt {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-color: #023a5c;
 }/*# sourceMappingURL=style.css.map */
