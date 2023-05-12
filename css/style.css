@@ -7,14 +7,14 @@
 
 body {
   overflow-x: hidden;
+  position: relative;
+  z-index: -10;
 }
-
-section {
+body section {
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 90vh;
 }
-section header {
+body section header {
   width: 100%;
   position: relative;
   height: 10%;
@@ -23,57 +23,57 @@ section header {
   display: flex;
   z-index: 2;
 }
-section header .div {
+body section header .div {
   width: 25%;
 }
-section header .center {
+body section header .center {
   display: flex;
 }
-section header .center .logo {
+body section header .center .logo {
   z-index: 0;
 }
-section header .center .logo .img {
+body section header .center .logo .img {
   height: 200%;
 }
-section header .center .navigation {
+body section header .center .navigation {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: start;
 }
-section header .center .navigation ul {
+body section header .center .navigation ul {
   display: flex;
 }
-section header .center .navigation ul .link {
+body section header .center .navigation ul .link {
   list-style: none;
   margin: 15px;
 }
-section header .center .navigation ul .link a {
+body section header .center .navigation ul .link a {
   text-decoration: none;
   color: #fff !important;
   font-size: 24px;
 }
-section header .search-bar {
+body section header .search-bar {
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: end;
   color: #fff;
 }
-section header .search-bar input {
+body section header .search-bar input {
   height: 30px;
   width: 70%;
   display: none;
 }
-section main {
+body section main {
   display: flex;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90%;
   padding-left: 10px;
-  z-index: 1;
+  z-index: 0;
 }
-section main #menu {
+body section main #menu {
   height: 100%;
   position: fixed;
   display: flex;
@@ -85,32 +85,32 @@ section main #menu {
   padding: 270px 0 20px 45px;
   overflow: hidden;
 }
-section main #menu .menu-list {
+body section main #menu .menu-list {
   display: flex;
   flex-direction: column;
   font-size: 30px;
   width: 80%;
 }
-section main #menu .menu-list .menu {
+body section main #menu .menu-list .menu {
   font-size: 20px;
   font-weight: 400;
   padding-bottom: 23px;
   margin-bottom: 20px;
   border-bottom: 3px dotted #023a5c;
 }
-section main #menu .menu-list .menu li {
+body section main #menu .menu-list .menu li {
   margin-bottom: 15px;
   list-style: none;
 }
-section main #menu .menu-list .menu li a {
+body section main #menu .menu-list .menu li a {
   color: #023a5c;
   text-decoration: none !important;
 }
-section main #menu .menu-list i {
+body section main #menu .menu-list i {
   color: #023a5c;
   margin-bottom: 10px;
 }
-section main #menu .hidden-menu {
+body section main #menu .hidden-menu {
   display: flex;
   position: relative;
   align-items: center;
@@ -121,7 +121,7 @@ section main #menu .hidden-menu {
   height: 100vh;
   top: -20%;
 }
-section main #menu .hidden-menu i {
+body section main #menu .hidden-menu i {
   position: absolute;
   right: 10px;
   color: grey;
@@ -129,7 +129,7 @@ section main #menu .hidden-menu i {
   padding: 10px;
   cursor: pointer;
 }
-section main #slider {
+body section main #slider {
   width: 100vw;
   height: 100%;
   position: relative;
@@ -139,59 +139,60 @@ section main #slider {
   right: 0;
   z-index: -5;
 }
-section main #slider .slider {
+body section main #slider .slider {
   position: absolute;
   width: 100%;
-  left: 0;
-  transition: left 2s;
+  height: 100%;
+  right: 0;
+  transition: right 2s;
 }
-section main #slider .text {
+body section main #slider .text {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
 }
-section main #slider .text h1 {
+body section main #slider .text h1 {
   font-size: 35px;
 }
-section main #slider .text p {
+body section main #slider .text p {
   text-align: right;
 }
-section main #slider .text p a {
+body section main #slider .text p a {
   text-decoration: none;
   color: #fff;
 }
-section main #slider form {
+body section main #slider form {
   position: absolute;
   bottom: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 766px;
 }
-section main #slider form #control-slider {
+body section main #slider form #control-slider {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: right;
 }
-section main #slider form #control-slider .control-slider {
+body section main #slider form #control-slider .control-slider {
   height: 20px;
   width: 40px;
   margin: 3px;
   margin-bottom: 5px;
 }
-section main #slider form #control-slider .control-slider:last-child {
+body section main #slider form #control-slider .control-slider:last-child {
   margin-right: 0;
 }
-section main #slider form .newsletter {
+body section main #slider form .newsletter {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
 }
-section main #slider form .newsletter .control {
+body section main #slider form .newsletter .control {
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -200,22 +201,22 @@ section main #slider form .newsletter .control {
   height: 50px;
   width: 85%;
 }
-section main #slider form .newsletter .control * {
+body section main #slider form .newsletter .control * {
   margin: 5px;
 }
-section main #slider form .newsletter .control img {
+body section main #slider form .newsletter .control img {
   height: 46px;
   width: 54px;
 }
-section main #slider form .newsletter .control label {
+body section main #slider form .newsletter .control label {
   background-color: #fff;
 }
-section main #slider form .newsletter .control input {
+body section main #slider form .newsletter .control input {
   width: 40%;
   height: 30px;
   font-size: 15px;
 }
-section main #slider form .newsletter .button {
+body section main #slider form .newsletter .button {
   padding: 5px;
   height: 50px;
   width: 15%;
@@ -225,11 +226,11 @@ section main #slider form .newsletter .button {
   align-items: center;
   justify-content: center;
 }
-section .container {
+body section .container {
   width: 1000px;
   padding: 60px 0;
 }
-section .container .title {
+body section .container .title {
   height: auto;
   width: 100%;
   display: flex;
@@ -237,23 +238,23 @@ section .container .title {
   justify-content: center;
   padding-bottom: 45px;
 }
-section .container .title img {
+body section .container .title img {
   margin-right: 15px;
 }
-section .container .title h1 {
+body section .container .title h1 {
   text-transform: uppercase;
 }
-section .container hr {
+body section .container hr {
   border-width: 0 0 2px 0;
   margin-bottom: 45px;
 }
-section .blue h1 {
+body section .blue {
   color: #fff;
 }
-section .blue hr {
+body section .blue hr {
   border-bottom: dotted #fff;
 }
-section .blue .branze-list {
+body section .blue .branze-list {
   position: relative;
   overflow: hidden;
   margin: 0 -9px;
@@ -261,7 +262,7 @@ section .blue .branze-list {
   display: flex;
   flex-wrap: wrap;
 }
-section .blue .branze-list .branch {
+body section .blue .branze-list .branch {
   float: left;
   position: relative;
   overflow: hidden;
@@ -270,12 +271,12 @@ section .blue .branze-list .branch {
   height: 150px;
   background: #fff;
 }
-section .blue .branze-list .branch img {
+body section .blue .branze-list .branch img {
   width: 315px;
   height: 150px;
   overflow: clip;
 }
-section .blue .branze-list .branch .dark-bgc {
+body section .blue .branze-list .branch .dark-bgc {
   position: absolute;
   display: block;
   background: rgba(0, 0, 0, 0.7);
@@ -284,13 +285,13 @@ section .blue .branze-list .branch .dark-bgc {
   top: -2px;
   left: -2px;
 }
-section .blue .branze-list .branch .dark-bgc:hover {
+body section .blue .branze-list .branch .dark-bgc:hover {
   background: rgba(0, 0, 0, 0);
 }
-section .blue .branze-list .branch .dark-bgc:hover h3 {
+body section .blue .branze-list .branch .dark-bgc:hover h3.last-row {
   color: #023a5c;
 }
-section .blue .branze-list .branch .dark-bgc h3 {
+body section .blue .branze-list .branch .dark-bgc h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -301,99 +302,227 @@ section .blue .branze-list .branch .dark-bgc h3 {
   color: #fff;
   text-transform: uppercase;
 }
-section .blue .branze-list .desc {
+body section .blue .branze-list .desc {
   position: relative;
   margin: 0 12px 23px;
   width: 315px;
   font-size: 16px;
   color: #fff;
 }
-section .blue .branze-list .desc p {
+body section .blue .branze-list .desc p {
   text-align: justify;
   padding-bottom: 45px;
 }
-section .blue .icons {
+body section .blue .icons {
   position: relative;
   height: 35%;
   margin-bottom: 100px;
 }
-section .blue .icons .icon {
+body section .blue .icons .icon {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-section .blue .icons .icon p {
+body section .blue .icons .icon p {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
-section .blue .icons .icon img {
+body section .blue .icons .icon img {
   height: 68px;
 }
-section .blue .icons .wdrozenia {
+body section .blue .icons .wdrozenia {
   top: 0;
   left: 0;
 }
-section .blue .icons .konsulting {
+body section .blue .icons .konsulting {
   top: 0;
   right: 0;
 }
-section .blue .icons .szkolenia {
+body section .blue .icons .szkolenia {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-section .blue .icons .doradztwo {
+body section .blue .icons .doradztwo {
   bottom: 0;
   left: 0;
 }
-section .blue .icons .dofinansowanie {
+body section .blue .icons .dofinansowanie {
   bottom: 0;
   right: 0;
 }
-section .blue .describe {
+body section .blue .describe {
   display: flex;
   margin-bottom: 100px;
 }
-section .blue .describe .desc {
+body section .blue .describe .desc {
   width: 50%;
   margin: 0 12px 23px;
   font-size: 20px;
 }
-section .blue .describe .desc p {
+body section .blue .describe .desc p {
   text-align: justify;
   color: #fff;
   margin-bottom: 20px;
 }
-section .white {
+body section .blue .kontakty {
+  position: relative;
+  margin: 0 -9px;
+  width: 1018px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body section .blue .kontakty .kontakt {
+  float: left;
+  position: relative;
+  margin: 0 12px 23px;
+  width: 315px;
+}
+body section .blue .kontakty .kontakt p {
+  margin: 10px;
+  padding: 5px;
+}
+body section .blue .kontakt-form {
+  display: flex;
+  margin: 50px;
+}
+body section .blue .kontakt-form .form {
   display: flex;
   flex-direction: column;
+  width: 45%;
 }
-section .white h1 {
+body section .blue .kontakt-form .form .form-title {
+  text-align: right;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+body section .blue .kontakt-form .form input[type=text] {
+  height: 35px;
+}
+body section .blue .kontakt-form .form input[type=text],
+body section .blue .kontakt-form .form textarea {
+  text-align: right;
+  margin-bottom: 12px;
+  width: 100%;
+}
+body section .blue .kontakt-form .form .form-control {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+body section .blue .kontakt-form .form .form-control .prezentacja p {
+  margin-bottom: 5px;
+}
+body section .blue .kontakt-form .form .form-control .prezentacja .check {
+  display: flex;
+}
+body section .blue .kontakt-form .form .form-control .prezentacja .check label {
+  margin: 0 20px 0 5px;
+}
+body section .blue .kontakt-form .form .form-control button {
+  width: 30%;
+}
+body section .blue .kontakt-form .form .form-email {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  body section .blue .kontakt-form .form {
+    position: relative;
+    margin: 0 -9px;
+    width: 315px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body section .blue .kontakt-form .form p {
+    float: left;
+    position: relative;
+    margin: 0 12px 23px;
+    width: 315px;
+    text-align: left !important;
+  }
+  body section .blue .kontakt-form .form input[type=text],
+  body section .blue .kontakt-form .form textarea,
+  body section .blue .kontakt-form .form .form-control {
+    display: none;
+  }
+  body section .blue .kontakt-form .form .form-email {
+    display: block !important;
+  }
+  body section .blue .kontakt-form .social-media {
+    display: none !important;
+  }
+  body section .blue .kontakt-form .praca p {
+    margin: 0 !important;
+  }
+  body section .blue .kontakt-form .praca .display-none {
+    display: none !important;
+  }
+}
+body section .blue .kontakt-form .social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  margin: 0 20px 20px 20px;
+}
+body section .blue .kontakt-form .social-media .form-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+body section .blue .kontakt-form .social-media img {
+  height: 90%;
+}
+body section .blue .kontakt-form .praca {
+  width: 25%;
+}
+body section .blue .kontakt-form .praca .form-title {
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+body section .blue .kontakt-form .praca p {
+  margin-bottom: 90px;
+}
+body section .blue a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+body section .white {
+  display: flex;
+  flex-direction: column;
   color: #023a5c;
 }
-section .white hr {
+body section .white hr {
   border-bottom: dotted #023a5c;
 }
-section .white .content .describe {
+body section .white .content .describe {
   display: flex;
   margin-bottom: 100px;
 }
-section .white .content .describe .desc {
+body section .white .content .describe .desc {
   width: 50%;
   margin: 0 12px 23px;
   font-size: 18.9px;
 }
-section .white .content .describe .desc p {
+body section .white .content .describe .desc p {
   text-align: justify;
 }
-section .white .content .items {
+body section .white .content .items {
   width: 100%;
   height: 100%;
 }
-section .white .content .items .circle {
+body section .white .content .items .circle {
   position: relative;
   float: left;
   width: 165px;
@@ -406,28 +535,31 @@ section .white .content .items .circle {
   justify-content: center;
   margin: 4px 17px 35px;
 }
-section .white .content .items .circle p:last-child::first-letter {
+body section .white .content .items .circle:hover {
+  top: -4px;
+}
+body section .white .content .items .circle p:last-child::first-letter {
   text-transform: lowercase;
 }
-section .white .content .items .circle p {
+body section .white .content .items .circle p {
   font-size: 21px;
   text-transform: uppercase;
   text-align: center;
 }
-section .white .content i {
+body section .white .content i {
   margin: 20px;
 }
-section .white .akt-slider {
+body section .white .akt-slider {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-section .white .akt-slider .akt-slide {
+body section .white .akt-slider .akt-slide {
   width: 25%;
   padding: 10px;
 }
-section .white .akt-slider .akt-slide .circle {
+body section .white .akt-slider .akt-slide .circle {
   position: relative;
   float: left;
   border-radius: 50%;
@@ -438,38 +570,51 @@ section .white .akt-slider .akt-slide .circle {
   overflow: hidden;
   background-position: center;
 }
-section .white .akt-slider .akt-slide .circle img {
+body section .white .akt-slider .akt-slide .circle img {
   height: 165px;
   width: 165px;
 }
-section .white .akt-slider .akt-slide p {
+body section .white .akt-slider .akt-slide p {
   color: #023a5c;
 }
-section .white .akt-slider .akt-slide .title-slide {
+body section .white .akt-slider .akt-slide .title-slide {
   text-transform: uppercase;
   margin: 5px 0;
 }
-section .white .akt-slider .akt-slide .hr {
+body section .white .akt-slider .akt-slide .hr {
   margin: 5px 0;
 }
-section .white .akt-slider i {
+body section .white .akt-slider i {
   font-size: 50px;
   padding: 10px;
 }
-
-#branze,
-#produkty,
-#uslugi,
-#aktualnosci,
-#kontakt {
+body #section {
+  height: 100vh;
+}
+body #branze,
+body #produkty,
+body #uslugi,
+body #aktualnosci,
+body #kontakt {
   display: flex;
   justify-content: center;
 }
-
-#branze,
-#uslugi,
-#kontakt {
+body #branze,
+body #uslugi,
+body #kontakt {
   position: relative;
-  z-index: 0;
+  z-index: -1;
   background-color: #023a5c;
+}
+body .sponsors-slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .sponsors-slider img {
+  margin: 40px;
+}
+body .sponsors-slider i {
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */

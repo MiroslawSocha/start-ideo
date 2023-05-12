@@ -54,9 +54,9 @@ function currentImage() {
 
 
             // console.log(sliders[i])
-            let left = sliders[number-1].style.left;
+            let left = sliders[number-1].style.right;
             console.log(left);
-            sliders[number-1].style.left = `1px`;
+            sliders[number-1].style.right = `1px`;
             // setInterval()
             // sliders[!number].style.left = `-100%`;
 
@@ -72,11 +72,11 @@ function currentImage() {
         if (currentImg > 4) {
             currentImg = 1;
         }
-        slider1.style.left = `calc(${(currentImg - 1) * 100}%`;
+        slider1.style.right = `calc(${(currentImg - 1) * 100}%`;
         // slider1.src = `assets/slider/slider${currentImg}.png`;
-        slider2.style.left = `calc(${(currentImg - 1) * 100 - 100}%`;
-        slider3.style.left = `calc(${(currentImg - 1) * 100 - 200}%`;
-        slider4.style.left = `calc(${(currentImg - 1) * 100 - 300}%`;
+        slider2.style.right = `calc(${(currentImg - 1) * 100 - 100}%`;
+        slider3.style.right = `calc(${(currentImg - 1) * 100 - 200}%`;
+        slider4.style.right = `calc(${(currentImg - 1) * 100 - 300}%`;
     }, 5000);
 
 
