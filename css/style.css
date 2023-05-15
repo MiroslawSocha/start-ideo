@@ -5,13 +5,25 @@
   font-family: "Open Sans", Arial, sans-serif;
 }
 
-body {
+html {
   overflow-x: hidden;
+}
+
+body {
   position: relative;
   z-index: -10;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  background-color: #023a5c;
+}
+@media only screen and (max-width: 770px) {
+  body {
+    width: 770px;
+  }
 }
 body section {
-  width: 100vw;
+  width: 100%;
   height: 90vh;
 }
 body section header {
@@ -65,6 +77,31 @@ body section header .search-bar input {
   width: 70%;
   display: none;
 }
+@media only screen and (max-width: 1650px) {
+  body section header .div {
+    display: none;
+  }
+  body section header .center .logo .img {
+    width: 250px;
+    height: 101%;
+  }
+}
+@media only screen and (max-width: 1650px) and (max-width: 1200px) {
+  body section header .search-bar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1650px) and (max-width: 770px) {
+  body section header .center .logo .img {
+    width: 170px;
+  }
+  body section header .navigation ul .link {
+    margin: 8px !important;
+  }
+  body section header .navigation ul .link a {
+    font-size: 15px !important;
+  }
+}
 body section main {
   display: flex;
   position: relative;
@@ -75,21 +112,21 @@ body section main {
 }
 body section main #menu {
   height: 100%;
-  position: fixed;
   display: flex;
+  position: fixed;
   top: 0;
   left: 0;
   width: 250px;
   background-color: #fff;
   z-index: 2;
-  padding: 270px 0 20px 45px;
-  overflow: hidden;
+  padding: 270px 0 20px 0;
 }
 body section main #menu .menu-list {
   display: flex;
   flex-direction: column;
   font-size: 30px;
   width: 80%;
+  padding-left: 45px;
 }
 body section main #menu .menu-list .menu {
   font-size: 20px;
@@ -110,16 +147,19 @@ body section main #menu .menu-list i {
   color: #023a5c;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 770px) {
+  body section main #menu {
+    width: 200px;
+  }
+}
 body section main #menu .hidden-menu {
   display: flex;
   position: relative;
   align-items: center;
-  margin-left: 10px;
   z-index: 0;
-  padding-right: 30px;
+  padding: 0 30px 0 10px;
   background-color: #fff;
   height: 100vh;
-  top: -20%;
 }
 body section main #menu .hidden-menu i {
   position: absolute;
@@ -128,6 +168,11 @@ body section main #menu .hidden-menu i {
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
+}
+@media only screen and (max-width: 770px) {
+  body section main #menu {
+    padding-top: 170px;
+  }
 }
 body section main #slider {
   width: 100vw;
@@ -168,7 +213,7 @@ body section main #slider form {
   bottom: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 766px;
+  width: 80%;
 }
 body section main #slider form #control-slider {
   width: 100%;
@@ -230,6 +275,11 @@ body section .container {
   width: 1000px;
   padding: 60px 0;
 }
+@media only screen and (max-width: 770px) {
+  body section .container {
+    width: 500px;
+  }
+}
 body section .container .title {
   height: auto;
   width: 100%;
@@ -280,7 +330,7 @@ body section .blue .branze-list .branch .dark-bgc {
   position: absolute;
   display: block;
   background: rgba(0, 0, 0, 0.7);
-  width: 101%;
+  width: 110%;
   height: 110%;
   top: -2px;
   left: -2px;
@@ -312,6 +362,29 @@ body section .blue .branze-list .desc {
 body section .blue .branze-list .desc p {
   text-align: justify;
   padding-bottom: 45px;
+}
+@media only screen and (max-width: 770px) {
+  body section .blue .branze-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    gap: 3px;
+  }
+  body section .blue .branze-list .branch {
+    width: 160px;
+    height: 90px;
+    margin: 0;
+  }
+  body section .blue .branze-list .branch img {
+    width: 160px;
+    height: 90px;
+  }
+  body section .blue .branze-list .branch .dark-bgc h3 {
+    font-size: 15px;
+  }
+  body section .blue .branze-list .desc {
+    display: none;
+  }
 }
 body section .blue .icons {
   position: relative;
@@ -368,6 +441,26 @@ body section .blue .describe .desc p {
   color: #fff;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 770px) {
+  body section .blue .icons {
+    margin-bottom: 0;
+  }
+  body section .blue .icons .icon {
+    flex-direction: row;
+  }
+  body section .blue .icons .icon img {
+    height: 40px;
+    padding-right: 5px;
+  }
+  body section .blue .icons .icon p {
+    -moz-text-align-last: left;
+         text-align-last: left;
+    font-size: 11px;
+  }
+  body section .blue .describe {
+    display: none;
+  }
+}
 body section .blue .kontakty {
   position: relative;
   margin: 0 -9px;
@@ -384,6 +477,21 @@ body section .blue .kontakty .kontakt {
 body section .blue .kontakty .kontakt p {
   margin: 10px;
   padding: 5px;
+}
+@media only screen and (max-width: 770px) {
+  body section .blue .kontakty {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body section .blue .kontakty .kontakt {
+    width: 180px;
+    margin: 0;
+  }
+  body section .blue .kontakty .kontakt p {
+    margin: 10px 0;
+    font-size: 12px;
+  }
 }
 body section .blue .kontakt-form {
   display: flex;
@@ -430,20 +538,27 @@ body section .blue .kontakt-form .form .form-control button {
 body section .blue .kontakt-form .form .form-email {
   display: none;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 770px) {
+  body section .blue .kontakt-form {
+    margin: 0 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
   body section .blue .kontakt-form .form {
+    width: 180px;
     position: relative;
     margin: 0 -9px;
-    width: 315px;
-    display: flex;
-    flex-wrap: wrap;
+  }
+  body section .blue .kontakt-form .form .form-title {
+    font-size: 13px;
+    margin-bottom: 15px;
   }
   body section .blue .kontakt-form .form p {
     float: left;
     position: relative;
     margin: 0 12px 23px;
-    width: 315px;
     text-align: left !important;
+    font-size: 12px;
   }
   body section .blue .kontakt-form .form input[type=text],
   body section .blue .kontakt-form .form textarea,
@@ -456,8 +571,17 @@ body section .blue .kontakt-form .form .form-email {
   body section .blue .kontakt-form .social-media {
     display: none !important;
   }
+  body section .blue .kontakt-form .praca {
+    width: 180px;
+    width: auto !important;
+  }
+  body section .blue .kontakt-form .praca .form-title {
+    font-size: 13px !important;
+    margin-bottom: 15px !important;
+  }
   body section .blue .kontakt-form .praca p {
     margin: 0 !important;
+    font-size: 12px;
   }
   body section .blue .kontakt-form .praca .display-none {
     display: none !important;
@@ -538,16 +662,31 @@ body section .white .content .items .circle {
 body section .white .content .items .circle:hover {
   top: -4px;
 }
-body section .white .content .items .circle p:last-child::first-letter {
-  text-transform: lowercase;
-}
 body section .white .content .items .circle p {
   font-size: 21px;
   text-transform: uppercase;
   text-align: center;
 }
-body section .white .content i {
-  margin: 20px;
+body section .white .content .items .circle p:last-child::first-letter {
+  text-transform: lowercase;
+}
+@media only screen and (max-width: 770px) {
+  body section .white .content .describe {
+    display: none;
+  }
+  body section .white .content .items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+  }
+  body section .white .content .items .circle {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+  body section .white .content .items .circle p {
+    font-size: 15px;
+  }
 }
 body section .white .akt-slider {
   display: flex;
@@ -584,6 +723,25 @@ body section .white .akt-slider .akt-slide .title-slide {
 body section .white .akt-slider .akt-slide .hr {
   margin: 5px 0;
 }
+@media only screen and (max-width: 770px) {
+  body section .white .akt-slider .akt-slide .circle {
+    margin: 4px 0 20px;
+  }
+  body section .white .akt-slider .akt-slide .circle img {
+    height: 100px;
+    width: 100px;
+  }
+  body section .white .akt-slider .akt-slide .text {
+    display: none;
+  }
+  body section .white .akt-slider .akt-slide .title-slide {
+    text-transform: uppercase;
+    margin: 5px 0;
+  }
+  body section .white .akt-slider .akt-slide .hr {
+    margin: 5px 0;
+  }
+}
 body section .white .akt-slider i {
   font-size: 50px;
   padding: 10px;
@@ -605,6 +763,10 @@ body #kontakt {
   position: relative;
   z-index: -1;
   background-color: #023a5c;
+}
+body #produkty,
+body #aktualnosci {
+  background-color: #fff;
 }
 body .sponsors-slider {
   width: 100%;

@@ -9,6 +9,7 @@ const slider1 = document.querySelector(".slider1");
 const slider2 = document.querySelector(".slider2");
 const slider3 = document.querySelector(".slider3");
 const slider4 = document.querySelector(".slider4");
+let menuWidth = 0;
 
 const aktImgs = document.querySelectorAll(".akt-img");
 const arrowLeft = document.querySelector(".arrow-left");
@@ -25,10 +26,14 @@ searchIcon.addEventListener("click", () => {
     }
 });
 
-iconToogleMenu.addEventListener("click", () => {
+iconToogleMenu.addEventListener("click", toogleMenu);
+
+function toogleMenu(){
+    menuWidth = document.querySelector(".menu-list").clientWidth;
     for (let i = 0; i < classList.length; i++) {
+
         if (classList[i] == "fa-rotate-180") {
-            menu.style.left = "-210px";
+            menu.style.left = `-${menuWidth}px`;
             iconToogleMenu.classList.add("fa-rotate-0");
             iconToogleMenu.classList.remove("fa-rotate-180");
             iconToogleMenu.style.color = "#023a5c"
@@ -40,7 +45,7 @@ iconToogleMenu.addEventListener("click", () => {
         }
 
     }
-});
+}
 
 
 
@@ -95,9 +100,9 @@ arrowRight.addEventListener("click", ()=> {
 
 function aktSlider() {
     for (let img in aktImgs) {
-        aktImgs[img].src = `assets/aktualnosci/lorem${images[img]}.png`
-        
+        aktImgs[img].src = `assets/aktualnosci/lorem${images[img]}.png`;
+           
     }
 }
-
+toogleMenu();
 currentImage();
