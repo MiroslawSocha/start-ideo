@@ -3,18 +3,8 @@ const searchIcon = document.querySelector(".search-icon");
 const menu = document.querySelector("#menu");
 const iconToogleMenu = document.querySelector(".icon-toogle-menu");
 let classList = iconToogleMenu.classList;
-const controlsSlider = document.querySelectorAll(".control-slider");
-const sliders = document.querySelectorAll(".slider");
-const slider1 = document.querySelector(".slider1");
-const slider2 = document.querySelector(".slider2");
-const slider3 = document.querySelector(".slider3");
-const slider4 = document.querySelector(".slider4");
 const links = document.querySelectorAll("a");
 let menuWidth = 0;
-const aktImgs = document.querySelectorAll(".akt-img");
-const arrowLeft = document.querySelector(".arrow-left");
-const arrowRight = document.querySelector(".arrow-right");
-let images = [1, 2, 3, 4];
 let number = 1;
 const kontaktLeft = document.querySelector(".kontakt-arrow-left");
 const kontaktRight = document.querySelector(".kontakt-arrow-right");
@@ -55,66 +45,49 @@ function toogleMenu() {
     }
 }
 
+$('#slider').slick({
+    infinite: true,
+    dots: true,
+    autoplay: true,
+    arrows: false
+});
 
+$('#akt-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    arrows: true,
+    prevArrow: '<i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i>',
+    nextArrow: '<i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>'
+});
 
-function currentImage() {
-    let currentImg = number;
-    for (let i = 0; i < controlsSlider.length; i++) {
-        controlsSlider[i].addEventListener("click", (event) => {
-            event.preventDefault();
-            number = event.target.value;
-            console.log(number);
-
-
-            // console.log(sliders[i])
-            let left = sliders[number - 1].style.right;
-            console.log(left);
-            sliders[number - 1].style.right = `1px`;
-            // setInterval()
-            // sliders[!number].style.left = `-100%`;
-
-            // sliders[number].style.left = `assets/slider/slider${number}.png`;
-
-            currentImg = number;
-        })
-
-    };
-
-    setInterval(() => {
-        currentImg++;
-        if (currentImg > 4) {
-            currentImg = 1;
+$('#kontakty').slick({
+    infinite: true,
+    slidesToShow: 3,
+    dots: true,
+    autoplay: true,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 771,
+            settings: {
+                slidesToShow: 1,
+                arrows: true,
+                prevArrow: '<i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i>',
+                nextArrow: '<i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>'
+            }
         }
-        slider1.style.right = `calc(${(currentImg - 1) * 100}%`;
-        // slider1.src = `assets/slider/slider${currentImg}.png`;
-        slider2.style.right = `calc(${(currentImg - 1) * 100 - 100}%`;
-        slider3.style.right = `calc(${(currentImg - 1) * 100 - 200}%`;
-        slider4.style.right = `calc(${(currentImg - 1) * 100 - 300}%`;
-    }, 5000);
+    ]
+});
 
+$('#sponsors-slider').slick({
+    infinite: true,
+    slidesToShow: 5,
+    arrows: true,
+    prevArrow: '<i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i>',
+    nextArrow: '<i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>'
+});
 
-}
-arrowLeft.addEventListener("click", () => {
-    let firstElement = images.shift();
-    images.push(firstElement);
-    aktSlider()
-})
-
-arrowRight.addEventListener("click", () => {
-    let lastElement = images.pop();
-    images.splice(0, 0, lastElement);
-    aktSlider()
-})
-
-function aktSlider() {
-    for (let img in aktImgs) {
-        aktImgs[img].src = `assets/aktualnosci/lorem${images[img]}.png`;
-
-    }
-}
 toogleMenu();
-if (screen.width > '770px' || screen.width <= '500px') {
-}
 
 
 let kontakt = 1;
@@ -178,7 +151,3 @@ sponsorRight.addEventListener("click", () => {
     }
     mobileSlide.src = `assets/sponsors/sponsor${sponsor}.png`;
 })
-
-
-
-currentImage();

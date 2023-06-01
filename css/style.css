@@ -12,40 +12,19 @@ html {
 body {
   position: relative;
   z-index: -10;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
   background-color: #023a5c;
-}
-@media only screen and (max-width: 770px) {
-  body {
-    width: 770px;
-  }
-}
-@media only screen and (max-width: 770px) and (max-width: 500px) {
-  body {
-    width: 500px;
-  }
-}
-@media only screen and (max-width: 770px) and (max-width: 400px) {
-  body {
-    width: 400px;
-  }
-}
-@media only screen and (max-width: 770px) and (max-width: 320px) {
-  body {
-    width: 320px;
-  }
+  min-width: 320px;
+  font-weight: 400;
 }
 body section {
   width: 100%;
+  height: calc(100vh + 10px);
 }
 body section header {
   width: 100%;
   position: relative;
-  height: 10%;
+  height: 78px;
   background-color: #023a5c;
-  padding-right: 40px;
   display: flex;
   z-index: 2;
 }
@@ -54,33 +33,46 @@ body section header .div {
 }
 body section header .center {
   display: flex;
+  margin: 0 auto;
+  height: 100%;
+  width: 1000px;
 }
 body section header .center .logo {
   z-index: 0;
 }
 body section header .center .logo .img {
-  height: 200%;
+  width: 270px;
+  padding-right: 20px;
 }
 body section header .center .navigation {
-  width: 50%;
+  width: 750px;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: left;
+  overflow-x: hidden;
 }
 body section header .center .navigation ul {
+  position: absolute;
   display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 body section header .center .navigation ul .link {
   list-style: none;
-  margin: 15px;
+  padding-left: 14px;
 }
 body section header .center .navigation ul .link a {
   text-decoration: none;
   color: #fff !important;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 100;
 }
 body section header .search-bar {
   width: 25%;
+  position: absolute;
+  right: 25px;
+  top: 40px;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -90,6 +82,9 @@ body section header .search-bar input {
   height: 30px;
   width: 70%;
   display: none;
+}
+body section header .search-bar i {
+  font-size: 30px;
 }
 @media only screen and (max-width: 1650px) {
   body section header .div {
@@ -126,84 +121,77 @@ body section header .search-bar input {
     display: none !important;
   }
 }
-body section main {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 90%;
-  padding-left: 10px;
-  z-index: 0;
-}
-body section main #menu {
+body section #menu {
+  transition: left 2s;
   height: 100%;
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 210px;
   background-color: #fff;
-  z-index: 2;
-  padding: 270px 0 20px 0;
+  z-index: 1;
+  padding: 165px 0 20px 0;
 }
-body section main #menu .menu-list {
+body section #menu .menu-list {
   display: flex;
   flex-direction: column;
   font-size: 30px;
   width: 80%;
-  padding-left: 45px;
+  padding: 0 10px 0 40px;
   height: 100vh;
 }
-body section main #menu .menu-list .menu {
+body section #menu .menu-list .menu {
   font-size: 20px;
-  font-weight: 400;
-  padding-bottom: 23px;
-  margin-bottom: 20px;
-  border-bottom: 3px dotted #023a5c;
+  font-weight: 200;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px dotted #023a5c;
 }
-body section main #menu .menu-list .menu li {
-  margin-bottom: 15px;
+body section #menu .menu-list .menu li {
+  margin: 9px 0 7px;
   list-style: none;
 }
-body section main #menu .menu-list .menu li a {
+body section #menu .menu-list .menu li a {
   color: #023a5c;
   text-decoration: none !important;
 }
-body section main #menu .menu-list i {
+body section #menu .menu-list i {
   color: #023a5c;
   margin-bottom: 10px;
 }
 @media only screen and (max-width: 770px) {
-  body section main #menu {
+  body section #menu {
     width: auto;
   }
-  body section main #menu .menu-list {
+  body section #menu .menu-list {
     width: auto;
     padding-left: 30px !important;
   }
 }
 @media only screen and (max-width: 770px) and (max-width: 500px) {
-  body section main #menu {
+  body section #menu {
     width: auto;
   }
-  body section main #menu .menu-list {
+  body section #menu .menu-list {
     width: auto !important;
     padding-left: 10px !important;
   }
-  body section main #menu .menu-list .menu {
+  body section #menu .menu-list .menu {
     font-size: 10px !important;
   }
 }
-body section main #menu .hidden-menu {
+body section #menu .hidden-menu {
   display: flex;
   position: relative;
-  align-items: center;
   z-index: -1;
   padding: 0 30px 0 10px;
   background-color: #fff;
-  height: 100vh;
+  height: 100%;
 }
-body section main #menu .hidden-menu i {
+body section #menu .hidden-menu i {
   position: absolute;
+  top: 50%;
   right: 10px;
   color: grey;
   font-size: 20px;
@@ -211,9 +199,17 @@ body section main #menu .hidden-menu i {
   cursor: pointer;
 }
 @media only screen and (max-width: 770px) {
-  body section main #menu {
+  body section #menu {
     padding-top: 170px;
   }
+}
+body section main {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  padding-left: 10px;
+  z-index: 0;
 }
 body section main #slider {
   width: 100vw;
@@ -225,87 +221,71 @@ body section main #slider {
   right: 0;
   z-index: -5;
 }
-body section main #slider .slider {
+body section main .text {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  transition: right 2s;
-}
-body section main #slider .text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   color: #fff;
 }
-body section main #slider .text h1 {
-  font-size: 35px;
+body section main .text h1 {
+  font-size: 40px;
+  line-height: 70px;
+  letter-spacing: 3px;
 }
-body section main #slider .text p {
+body section main .text p {
+  padding-top: px;
   text-align: right;
 }
-body section main #slider .text p a {
+body section main .text p a {
   text-decoration: none;
   color: #fff;
+  font-size: 25px;
 }
-body section main #slider form {
+body section main form {
   position: absolute;
-  bottom: 15%;
+  bottom: -5px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 1000px;
 }
-body section main #slider form #control-slider {
+body section main form .newsletter {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
 }
-body section main #slider form #control-slider .control-slider {
-  height: 20px;
-  width: 40px;
-  margin: 3px;
-  margin-bottom: 5px;
-}
-body section main #slider form #control-slider .control-slider:last-child {
-  margin-right: 0;
-}
-body section main #slider form .newsletter {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
-}
-body section main #slider form .newsletter .control {
+body section main form .newsletter .control {
   background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-right: 7px;
-  height: 50px;
   width: 85%;
 }
-body section main #slider form .newsletter .control * {
+body section main form .newsletter .control * {
   margin: 5px;
 }
-body section main #slider form .newsletter .control img {
+body section main form .newsletter .control img {
   height: 46px;
   width: 54px;
+  margin-right: 0;
 }
-body section main #slider form .newsletter .control label {
+body section main form .newsletter .control label {
   background-color: #fff;
+  font-size: 20px;
+  margin-right: 0;
 }
-body section main #slider form .newsletter .control input {
-  width: 40%;
+body section main form .newsletter .control input {
+  width: 42%;
   height: 30px;
   font-size: 15px;
 }
-body section main #slider form .newsletter .button {
-  padding: 5px;
-  height: 50px;
-  width: 15%;
+body section main form .newsletter .button {
+  padding-top: 8px;
+  height: 55px;
+  font-size: 20px;
+  width: 14%;
   background-color: #fff;
   cursor: pointer;
   display: flex;
@@ -323,7 +303,7 @@ body section main #slider form .newsletter .button {
 }
 body section .container {
   width: 1000px;
-  padding: 60px 0 150px 0;
+  padding: 40px 0;
 }
 @media only screen and (max-width: 770px) {
   body section .container {
@@ -331,22 +311,33 @@ body section .container {
   }
 }
 body section .container .title {
-  height: auto;
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  text-align: center;
   padding-bottom: 45px;
+  overflow: hidden;
+  font-size: 29px;
+  line-height: 75px;
+  text-transform: uppercase;
+  font-weight: 400;
+  vertical-align: top;
 }
 body section .container .title img {
-  margin-right: 15px;
+  margin-right: 18px;
+  height: 75px;
 }
-body section .container .title h1 {
+body section .container .title h2 {
   text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 27px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
 }
 body section .container hr {
   border-width: 0 0 2px 0;
-  margin-bottom: 45px;
+  margin-bottom: 49px;
 }
 body section .blue {
   color: #fff;
@@ -378,12 +369,13 @@ body section .blue .branze-list .branch img {
 }
 body section .blue .branze-list .branch .dark-bgc {
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(0, 0, 0, 0.7);
-  width: 110%;
-  height: 110%;
-  top: -2px;
-  left: -2px;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 body section .blue .branze-list .branch .dark-bgc:hover {
   background: rgba(0, 0, 0, 0);
@@ -393,25 +385,29 @@ body section .blue .branze-list .branch .dark-bgc:hover h3.last-row {
 }
 body section .blue .branze-list .branch .dark-bgc h3 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: 700;
-  font-size: 20px;
+  top: 68px;
+  width: 100%;
+  font-weight: normal;
+  font-size: 19px;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 body section .blue .branze-list .desc {
   position: relative;
-  margin: 0 12px 23px;
+  top: -7px;
+  left: -4px;
+  margin: 0 12px 60px;
   width: 315px;
-  font-size: 16px;
+  font-size: 15px;
   color: #fff;
+  font-weight: 400;
 }
 body section .blue .branze-list .desc p {
+  word-spacing: 1.8px;
   text-align: justify;
-  padding-bottom: 45px;
+  padding-bottom: 21px;
 }
 @media only screen and (max-width: 770px) {
   body section .blue .branze-list {
@@ -452,11 +448,24 @@ body section .blue .branze-list .desc p {
 }
 body section .blue .icons {
   position: relative;
-  height: 35%;
+  height: 350px;
   margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 15px 0;
+}
+body section .blue .icons .first-column, body section .blue .icons .last-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 330px;
+  height: 100%;
+}
+body section .blue .icons .center-column {
+  width: 330px;
 }
 body section .blue .icons .icon {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -470,35 +479,14 @@ body section .blue .icons .icon p {
 body section .blue .icons .icon img {
   height: 68px;
 }
-body section .blue .icons .wdrozenia {
-  top: 0;
-  left: 0;
-}
-body section .blue .icons .konsulting {
-  top: 0;
-  right: 0;
-}
-body section .blue .icons .szkolenia {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-body section .blue .icons .doradztwo {
-  bottom: 0;
-  left: 0;
-}
-body section .blue .icons .dofinansowanie {
-  bottom: 0;
-  right: 0;
-}
 body section .blue .describe {
   display: flex;
   margin-bottom: 100px;
 }
 body section .blue .describe .desc {
   width: 50%;
-  margin: 0 12px 23px;
-  font-size: 20px;
+  margin: 0 12px 30px;
+  font-size: 19px;
 }
 body section .blue .describe .desc p {
   text-align: justify;
@@ -543,66 +531,68 @@ body section .blue .describe .desc p {
     text-align: center;
   }
 }
-body section .blue .kontakty {
+body section .blue #kontakty {
   position: relative;
   margin: 0 -9px;
   width: 1018px;
   display: flex;
   flex-wrap: wrap;
 }
-body section .blue .kontakty .kontakt {
+body section .blue #kontakty .slick-slide {
+  width: auto !important;
+}
+body section .blue #kontakty .kontakt {
   float: left;
   position: relative;
   margin: 0 12px 23px;
   width: 315px;
 }
-body section .blue .kontakty .kontakt p {
+body section .blue #kontakty .kontakt p {
   margin: 10px;
   padding: 5px;
 }
-body section .blue .kontakty i {
+body section .blue #kontakty i {
   display: none;
 }
 @media only screen and (max-width: 770px) {
-  body section .blue .kontakty {
+  body section .blue #kontakty {
     width: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  body section .blue .kontakty .kontakt {
+  body section .blue #kontakty .kontakt {
     width: 180px;
     margin: 0;
   }
-  body section .blue .kontakty .kontakt p {
+  body section .blue #kontakty .kontakt p {
     margin: 10px 0;
     font-size: 12px;
   }
 }
 @media only screen and (max-width: 770px) and (max-width: 500px) {
-  body section .blue .kontakty {
+  body section .blue #kontakty {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  body section .blue .kontakty .kontakt:nth-child(3),
-  body section .blue .kontakty .kontakt:nth-child(4) {
+  body section .blue #kontakty .kontakt:nth-child(3),
+  body section .blue #kontakty .kontakt:nth-child(4) {
     display: none;
   }
-  body section .blue .kontakty .kontakt p {
+  body section .blue #kontakty .kontakt p {
     text-align: center;
   }
-  body section .blue .kontakty i {
+  body section .blue #kontakty i {
     display: block;
   }
 }
 body section .blue .kontakt-form {
   display: flex;
-  margin: 50px;
+  margin-bottom: 10px;
 }
 body section .blue .kontakt-form .form {
   display: flex;
   flex-direction: column;
-  width: 45%;
 }
 body section .blue .kontakt-form .form .form-title {
   text-align: right;
@@ -616,8 +606,12 @@ body section .blue .kontakt-form .form input[type=text] {
 body section .blue .kontakt-form .form input[type=text],
 body section .blue .kontakt-form .form textarea {
   text-align: right;
-  margin-bottom: 12px;
-  width: 100%;
+  margin-bottom: 10px;
+  width: 415px !important;
+  padding: 10px;
+}
+body section .blue .kontakt-form .form textarea {
+  height: 92px;
 }
 body section .blue .kontakt-form .form .form-control {
   display: flex;
@@ -626,16 +620,24 @@ body section .blue .kontakt-form .form .form-control {
   margin-bottom: 30px;
 }
 body section .blue .kontakt-form .form .form-control .prezentacja p {
-  margin-bottom: 5px;
+  margin: 3px 0 5px;
 }
 body section .blue .kontakt-form .form .form-control .prezentacja .check {
   display: flex;
+  margin-top: 16px;
+}
+body section .blue .kontakt-form .form .form-control .prezentacja .check input[type=checkbox] {
+  width: 22px;
+  margin-right: 4px;
 }
 body section .blue .kontakt-form .form .form-control .prezentacja .check label {
+  font-size: 15px;
+  letter-spacing: 0.3px;
   margin: 0 20px 0 5px;
 }
 body section .blue .kontakt-form .form .form-control button {
-  width: 30%;
+  margin-top: 5px;
+  width: 120px;
 }
 body section .blue .kontakt-form .form .form-email {
   display: none;
@@ -694,7 +696,7 @@ body section .blue .kontakt-form .social-media {
   flex-direction: column;
   align-items: center;
   width: 15%;
-  margin: 0 20px 20px 20px;
+  margin: 0 30px 0 37px;
 }
 body section .blue .kontakt-form .social-media .form-title {
   text-align: center;
@@ -703,7 +705,8 @@ body section .blue .kontakt-form .social-media .form-title {
   font-size: 16px;
 }
 body section .blue .kontakt-form .social-media img {
-  height: 90%;
+  height: 70px;
+  margin-bottom: 25px;
 }
 body section .blue .kontakt-form .praca {
   width: 25%;
@@ -715,14 +718,23 @@ body section .blue .kontakt-form .praca .form-title {
   font-size: 16px;
 }
 body section .blue .kontakt-form .praca p {
-  margin-bottom: 90px;
+  line-height: 19px;
+  font-size: 15.5px;
+  margin-bottom: 43px;
+}
+body section .blue .kontakt-form .praca p:last-child {
+  padding-top: 40px;
 }
 body section .blue a {
   display: block;
+  position: relative;
+  top: -37px;
+  left: 3px;
   width: 100%;
   text-align: center;
   text-decoration: none;
   color: #fff;
+  font-size: 15.6px;
 }
 body section .white {
   display: flex;
@@ -738,11 +750,14 @@ body section .white .content .describe {
 }
 body section .white .content .describe .desc {
   width: 50%;
-  margin: 0 12px 23px;
-  font-size: 18.9px;
+  margin: 0 0 7px;
+  font-size: 20px;
 }
 body section .white .content .describe .desc p {
   text-align: justify;
+}
+body section .white .content .describe .desc:first-child {
+  margin-right: 30px;
 }
 body section .white .content .items {
   width: 100%;
@@ -751,26 +766,26 @@ body section .white .content .items {
 body section .white .content .items .circle {
   position: relative;
   float: left;
-  width: 165px;
-  height: 165px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background-color: #023a5c;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4px 17px 35px;
+  margin: 0 0 38px 48px;
 }
 body section .white .content .items .circle:hover {
   top: -4px;
+}
+body section .white .content .items .circle:first-child, body section .white .content .items .circle:nth-child(6) {
+  margin-left: 0;
 }
 body section .white .content .items .circle p {
   font-size: 21px;
   text-transform: uppercase;
   text-align: center;
-}
-body section .white .content .items .circle p:last-child::first-letter {
-  text-transform: lowercase;
 }
 @media only screen and (max-width: 770px) {
   body section .white .content .describe {
@@ -811,17 +826,23 @@ body section .white .content .items .circle p:last-child::first-letter {
     display: none !important;
   }
 }
-body section .white .akt-slider {
+body section .white #akt-slider {
+  position: relative;
+  top: -83px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-body section .white .akt-slider .akt-slide {
-  width: 25%;
-  padding: 10px;
+body section .white #akt-slider i {
+  position: relative;
+  top: -7px;
 }
-body section .white .akt-slider .akt-slide .circle {
+body section .white #akt-slider .akt-slide {
+  width: 200px;
+  margin: 0 12px;
+}
+body section .white #akt-slider .akt-slide .circle {
   position: relative;
   float: left;
   border-radius: 50%;
@@ -832,74 +853,76 @@ body section .white .akt-slider .akt-slide .circle {
   overflow: hidden;
   background-position: center;
 }
-body section .white .akt-slider .akt-slide .circle img {
-  height: 165px;
-  width: 165px;
+body section .white #akt-slider .akt-slide .circle img {
+  height: 193px;
+  width: 193px;
 }
-body section .white .akt-slider .akt-slide p {
+body section .white #akt-slider .akt-slide p {
+  font-size: 13px;
   color: #023a5c;
 }
-body section .white .akt-slider .akt-slide .title-slide {
+body section .white #akt-slider .akt-slide .title-slide {
   text-transform: uppercase;
   margin: 5px 0;
 }
-body section .white .akt-slider .akt-slide .hr {
+body section .white #akt-slider .akt-slide .hr {
   margin: 5px 0;
 }
-body section .white .akt-slider .akt-slide .lorem-more {
+body section .white #akt-slider .akt-slide .lorem-more {
   display: none;
 }
 @media only screen and (max-width: 770px) {
-  body section .white .akt-slider .akt-slide:nth-child(5) {
+  body section .white #akt-slider .akt-slide:nth-child(5) {
     display: none;
   }
-  body section .white .akt-slider .akt-slide .circle {
+  body section .white #akt-slider .akt-slide .circle {
     margin: 4px 0 20px;
   }
-  body section .white .akt-slider .akt-slide .circle img {
+  body section .white #akt-slider .akt-slide .circle img {
     height: 100px;
     width: 100px;
   }
-  body section .white .akt-slider .akt-slide .text {
+  body section .white #akt-slider .akt-slide .text {
     display: none;
   }
-  body section .white .akt-slider .akt-slide .title-slide {
+  body section .white #akt-slider .akt-slide .title-slide {
     text-transform: uppercase;
     margin: 5px 0;
   }
-  body section .white .akt-slider .akt-slide .hr {
+  body section .white #akt-slider .akt-slide .hr {
     margin: 5px 0;
   }
 }
 @media only screen and (max-width: 770px) and (max-width: 500px) {
-  body section .white .akt-slider .akt-slide:nth-child(2) {
+  body section .white #akt-slider .akt-slide:nth-child(2) {
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  body section .white .akt-slider .akt-slide:nth-child(2) .circle {
+  body section .white #akt-slider .akt-slide:nth-child(2) .circle {
     width: 150px;
     height: 150px;
   }
-  body section .white .akt-slider .akt-slide:nth-child(2) .circle img {
+  body section .white #akt-slider .akt-slide:nth-child(2) .circle img {
     width: 150px;
     height: 150px;
   }
-  body section .white .akt-slider .akt-slide:nth-child(2) .hr, body section .white .akt-slider .akt-slide:nth-child(2) .more {
+  body section .white #akt-slider .akt-slide:nth-child(2) .hr,
+  body section .white #akt-slider .akt-slide:nth-child(2) .more {
     display: none;
   }
-  body section .white .akt-slider .akt-slide:nth-child(2) .lorem-more {
+  body section .white #akt-slider .akt-slide:nth-child(2) .lorem-more {
     display: block;
     text-align: justify;
   }
-  body section .white .akt-slider .akt-slide:nth-child(3),
-  body section .white .akt-slider .akt-slide:nth-child(4),
-  body section .white .akt-slider .akt-slide:nth-child(5) {
+  body section .white #akt-slider .akt-slide:nth-child(3),
+  body section .white #akt-slider .akt-slide:nth-child(4),
+  body section .white #akt-slider .akt-slide:nth-child(5) {
     display: none;
   }
 }
-body section .white .akt-slider i {
+body section .white #akt-slider i {
   font-size: 50px;
   padding: 10px;
 }
@@ -911,7 +934,7 @@ body section .white .akt-slider i {
   }
 }
 body #section {
-  height: 100vh !important;
+  height: calc(100vh + 20px) !important;
 }
 body #branze,
 body #produkty,
@@ -935,41 +958,51 @@ body #aktualnosci {
 body #kontakt {
   height: 100vh;
 }
-body .sponsors-slider {
+body #kontakt .container {
+  width: 840px !important;
+}
+body #sponsors-slider {
   background-color: #fff;
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 30px;
 }
-body .sponsors-slider img {
-  margin: 40px;
+body #sponsors-slider .slick-list {
+  width: 840px;
+}
+body #sponsors-slider .slick-track {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+body #sponsors-slider img {
+  margin: 10px 20px;
   width: 100px;
   height: 70px;
 }
-body .sponsors-slider i {
-  display: none;
+body #sponsors-slider i {
   font-size: 50px;
 }
 @media only screen and (max-width: 770px) {
-  body .sponsors-slider {
+  body #sponsors-slider {
     margin-top: -100px;
   }
 }
 @media only screen and (max-width: 500px) {
-  body .sponsors-slider {
+  body #sponsors-slider {
     left: 100px;
     margin-top: -100px;
   }
-  body .sponsors-slider .sponsor-slide:nth-child(3),
-  body .sponsors-slider .sponsor-slide:nth-child(4),
-  body .sponsors-slider .sponsor-slide:nth-child(5),
-  body .sponsors-slider .sponsor-slide:nth-child(6) {
+  body #sponsors-slider .sponsor-slide:nth-child(3),
+  body #sponsors-slider .sponsor-slide:nth-child(4),
+  body #sponsors-slider .sponsor-slide:nth-child(5),
+  body #sponsors-slider .sponsor-slide:nth-child(6) {
     display: none !important;
   }
-  body .sponsors-slider i {
+  body #sponsors-slider i {
     display: block;
   }
 }/*# sourceMappingURL=style.css.map */

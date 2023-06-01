@@ -8,13 +8,15 @@
     <title>Simple</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0f17cf04ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <section id="section">
         <header>
-            <div class="div"></div>
+            <!-- <div class="div"></div> -->
             <div class="center">
                 <div class="logo">
                     <img src="assets/logo.png" alt="logo" class="img">
@@ -36,56 +38,51 @@
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </div>
         </header>
-        <main>
-            <div id="menu">
-                <div class="menu-list">
-                    <ul class="menu">
-                        <li><a href="#">Menu</a></li>
-                    </ul>
-                    <ul class="menu">
-                        <li><a href="#branze">Branże</a></li>
-                        <li><a href="#produkty">Produkty</a></li>
-                        <li><a href="#uslugi">Usługi</a></li>
-                        <li><a href="#aktualnosci">Aktualności</a></li>
-                        <li><a href="#">Referencje</a></li>
-                        <li><a href="#kontakt">Kontakt</a></li>
-                    </ul>
-                    <ul class="menu">
-                        <li><a href="#">O firmie</a></li>
-                        <li><a href="#">Nagrody</a></li>
-                        <li><a href="#">Relacje innowatorskie</a></li>
-                        <li><a href="#">Partnerzy</a></li>
-                        <li><a href="#">Kariera</a></li>
-                        <li><a href="#">Strefa klienta</a></li>
-                    </ul>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <div id="menu">
+            <div class="menu-list">
+                <ul class="menu">
+                    <li><a href="#">Menu</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#branze">Branże</a></li>
+                    <li><a href="#produkty">Produkty</a></li>
+                    <li><a href="#uslugi">Usługi</a></li>
+                    <li><a href="#aktualnosci">Aktualności</a></li>
+                    <li><a href="#">Referencje</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#">O firmie</a></li>
+                    <li><a href="#">Nagrody</a></li>
+                    <li><a href="#">Relacje innowatorskie</a></li>
+                    <li><a href="#">Partnerzy</a></li>
+                    <li><a href="#">Kariera</a></li>
+                    <li><a href="#">Strefa klienta</a></li>
+                </ul>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
 
 
-                </div>
-                <div class="hidden-menu">
-                    <i class="icon-toogle-menu fa-sharp fa-solid fa-play fa-rotate-180"></i>
-                </div>
             </div>
+            <div class="hidden-menu">
+                <i class="icon-toogle-menu fa-sharp fa-solid fa-play fa-rotate-180"></i>
+            </div>
+        </div>
+        <main>
 
             <div id="slider">
-                <img class="slider slider4" src="assets/slider/slider4.png" alt="slider">
-                <img class="slider slider3" src="assets/slider/slider3.png" alt="slider">
-                <img class="slider slider2" src="assets/slider/slider2.png" alt="slider">
-                <img class="slider slider1" src="assets/slider/slider1.png" alt="slider">
-
+                <div><img class="slider slider1" src="assets/slider/slider1.png" alt="slider"></div>
+                <div><img class="slider slider2" src="assets/slider/slider2.png" alt="slider"></div>
+                <div><img class="slider slider3" src="assets/slider/slider3.png" alt="slider"></div>
+                <div><img class="slider slider4" src="assets/slider/slider4.png" alt="slider"></div>
+            </div>
+            <div id="control-slider">
                 <div class="text">
                     <h1>SIMPLE <br> - z nami biznes jest prostszy!</h1>
                     <p><a href="#">Dowiedz się więcej</a></p>
                 </div>
 
                 <form>
-                    <div id="control-slider">
-                        <button class="control-slider" value="1"></button>
-                        <button class="control-slider" value="2"></button>
-                        <button class="control-slider" value="3"></button>
-                        <button class="control-slider" value="4"></button>
-                    </div>
                     <div class="newsletter">
                         <div class="control">
                             <img src="assets/icons/icon-news-pc.png" alt="newsletter">
@@ -96,9 +93,9 @@
                             Zapisz się
                         </div>
                     </div>
-
-
                 </form>
+            </div>
+
             </div>
         </main>
     </section>
@@ -106,7 +103,7 @@
         <div class="container blue">
             <div class="title">
                 <img src="assets/icons/icon-branze.png" alt="icon">
-                <h1>Branże</h1>
+                <h2>Branże</h2>
             </div>
             <hr>
             <div class="branze-list">
@@ -166,7 +163,7 @@
                     </div>
                 </div>
                 <div class="desc">
-                    <p>Simple to znak rozpoznawczy szerokiej rodziny rozwiązań informatycznych wspomagających
+                    <p>SIMPLE to znak rozpoznawczy szerokiej rodziny rozwiązań informatycznych wspomagających
                         zarządzanie obszarami: finansów, obrotu towarowego, personelu, procesów budownictwa, produkcji,
                         łańcucha dostaw czy relacji z klientami. Od ponad 24 lat dostarczamy wyspecjalizowane usługi
                         integracji rozwiazań informatycznych i</p>
@@ -189,7 +186,7 @@
         <div class="container white">
             <div class="title">
                 <img src="assets/icons/icon-produkty.png" alt="icon">
-                <h1>Produkty</h1>
+                <h2>Produkty</h2>
             </div>
             <hr>
             <div class="content">
@@ -197,7 +194,7 @@
                     <div class="desc">
                         <p>Nieustannie doskonalimy nasze produkty i usługi. Budujemy naszą ofertę z myślą o potrzebach
                             biznesowych i profilach branżowych naszych Klientów.</p>
-                        <p style="text-indent: 20px;">Nasza oferta obejmuje bogate portfolio innowacyjnych systemów
+                        <p style="text-indent: 30px;">Nasza oferta obejmuje bogate portfolio innowacyjnych systemów
                             informatycznych</p>
                     </div>
                     <div class="desc">
@@ -245,29 +242,35 @@
         <div class="container blue">
             <div class="title">
                 <img src="assets/icons/tools.png" alt="icon">
-                <h1>Usługi</h1>
+                <h2>Usługi</h2>
             </div>
             <hr>
             <div class="icons">
-                <div class="icon wdrozenia">
-                    <img src="assets/uslugi/wdrozenia.png" alt="wdrozenia">
-                    <p>Wdrożenia erp, crm, bi</p>
+                <div class="first-column">
+                    <div class="icon wdrozenia">
+                        <img src="assets/uslugi/wdrozenia.png" alt="wdrozenia">
+                        <p>Wdrożenia erp, crm, bi</p>
+                    </div>
+                    <div class="icon doradztwo">
+                        <img src="assets/uslugi/doradztwo.png" alt="doradztwo">
+                        <p>Doradztwo w zakresie <br> infrastruktury informatycznej</p>
+                    </div>
                 </div>
-                <div class="icon konsulting">
-                    <img src="assets/uslugi/konsulting.png" alt="konsulting">
-                    <p>Konsulting erp, crm, bi</p>
+                <div class="center-column">
+                    <div class="icon szkolenia">
+                        <img src="assets/uslugi/szkolenia.png" alt="szkolenia">
+                        <p>Szkolenia</p>
+                    </div>
                 </div>
-                <div class="icon szkolenia">
-                    <img src="assets/uslugi/szkolenia.png" alt="szkolenia">
-                    <p>Szkolenia</p>
-                </div>
-                <div class="icon doradztwo">
-                    <img src="assets/uslugi/doradztwo.png" alt="doradztwo">
-                    <p>Doradztwo w zakresie <br> infrastruktury informatycznej</p>
-                </div>
-                <div class="icon dofinansowanie">
-                    <img src="assets/uslugi/dofinansowanie.png" alt="dofinansowanie">
-                    <p>Dofinansowanie i leasing</p>
+                <div class="last-column">
+                    <div class="icon konsulting">
+                        <img src="assets/uslugi/konsulting.png" alt="konsulting">
+                        <p>Konsulting erp, crm, bi</p>
+                    </div>
+                    <div class="icon dofinansowanie">
+                        <img src="assets/uslugi/dofinansowanie.png" alt="dofinansowanie">
+                        <p>Dofinansowanie i leasing</p>
+                    </div>
                 </div>
             </div>
             <div class="describe">
@@ -293,11 +296,11 @@
         <div class="container white">
             <div class="title">
                 <img src="assets/icons/icon-aktualnosci.png" alt="icon">
-                <h1>Aktualności</h1>
+                <h2>Aktualności</h2>
             </div>
             <hr>
-            <div class="akt-slider">
-                <i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i>
+            <div id="akt-slider">
+                <!-- <i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i> -->
                 <div class="akt-slide">
                     <div class="circle">
                         <img class="akt-img" src="assets/aktualnosci/lorem1.png" alt="lorem1">
@@ -307,7 +310,11 @@
                     <p class="text">lorem ipsum, lorem ipsum <br> lorem ipsumlorem <br> lorem ipsum ipsum.</p>
                     <p class="hr">..........</p>
                     <p class="more">więcej</p>
-                    <p class="lorem-more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam odio inventore quis, deleniti excepturi? Placeat dolores repellat quaerat tempora odio quae, nemo deserunt ut tenetur ad. Perspiciatis accusantium inventore, consectetur earum aliquid obcaecati enim tempore eos voluptatum. Explicabo est id itaque cum deleniti aut numquam atque non beatae velit.</p>
+                    <p class="lorem-more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aperiam
+                        odio inventore quis, deleniti excepturi? Placeat dolores repellat quaerat tempora odio quae,
+                        nemo deserunt ut tenetur ad. Perspiciatis accusantium inventore, consectetur earum aliquid
+                        obcaecati enim tempore eos voluptatum. Explicabo est id itaque cum deleniti aut numquam atque
+                        non beatae velit.</p>
                 </div>
                 <div class="akt-slide">
                     <div class="circle">
@@ -339,7 +346,17 @@
                     <p class="hr">..........</p>
                     <p class="more">więcej</p>
                 </div>
-                <i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>
+                <div class="akt-slide">
+                    <div class="circle">
+                        <img class="akt-img" src="assets/aktualnosci/lorem1.png" alt="lorem1">
+                    </div>
+                    <p class="date">1.06.2013</p>
+                    <p class="title-slide">Lorem ipsum.</p>
+                    <p class="text">lorem ipsum, lorem ipsum <br> lorem ipsumlorem <br> lorem ipsum ipsum.</p>
+                    <p class="hr">..........</p>
+                    <p class="more">więcej</p>
+                </div>
+                <!-- <i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i> -->
             </div>
         </div>
     </section>
@@ -347,11 +364,11 @@
         <div class="container blue">
             <div class="title">
                 <img src="assets/icons/icon-kontakt.png" alt="icon">
-                <h1>Kontakt</h1>
+                <h2>Kontakt</h2>
             </div>
             <hr>
-            <div class="kontakty">
-                <i class="fa fa-chevron-left fa-lg text-muted kontakt-arrow-left"></i>
+            <div id="kontakty">
+                <!-- <i class="fa fa-chevron-left fa-lg text-muted kontakt-arrow-left"></i> -->
                 <div class="kontakt">
                     <p class="kontakt-nazwa">SIMPLE S.A.</p>
                     <p class="kontakt-adres">ul. Bronisława Czecha 49/51 <br> 04-555 Warszawa</p>
@@ -359,7 +376,7 @@
                     <p class="kontakt-email">simple@simple.com.pl</p>
                 </div>
                 <div class="kontakt">
-                    <p class="kontakt-nazwa">SIMPLE S.A. - Ośrodek Badawczo - rozwojowy Lublin</p>
+                    <p class="kontakt-nazwa">SIMPLE S.A. - Ośrodek Badawczo - <br> rozwojowy Lublin</p>
                     <p class="kontakt-adres">ul. Wolska 11A/4 <br> 20-411 Lublin</p>
                     <p class="kontakt-telefon">tel. kom: +48 696 001 286</p>
                     <p class="kontakt-email">lublin@simple.com.pl</p>
@@ -370,7 +387,7 @@
                     <p class="kontakt-telefon">tel. kom.: +48 696 001 235 <br> fax.: (17)865 42 41</p>
                     <p class="kontakt-email">rzeszow@simple.com.pl</p>
                 </div>
-                <i class="fa fa-chevron-right fa-lg text-muted kontakt-arrow-right"></i>
+                <!-- <i class="fa fa-chevron-right fa-lg text-muted kontakt-arrow-right"></i> -->
             </div>
             <hr>
             <div class="kontakt-form">
@@ -395,7 +412,10 @@
                 </div>
                 <div class="social-media">
                     <p class="form-title">Social media</p>
-                    <img src="assets/socials.png" alt="">
+                    <img src="assets/socials/facebook.png" alt="facebook">
+                    <img src="assets/socials/tweeter.png" alt="tweeter">
+                    <img src="assets/socials/google.png" alt="google">
+                    <img src="assets/socials/linkedin.png" alt="linkedin">
                 </div>
                 <div class="praca">
                     <div class="form-title">Praca</div>
@@ -408,16 +428,20 @@
             <a href="#section">Powrót na górę strony</a>
         </div>
     </section>
-    <footer class="sponsors-slider">
-        <i class="fa fa-chevron-left fa-lg text-muted sponsor-arrow-left"></i>
-        <img class="sponsor-slide mobile-slide" src="assets/sponsors/sponsor1.png" alt="sponsor1">
+    <footer id="sponsors-slider">
+        <!-- <i class="fa fa-chevron-left fa-lg text-muted sponsor-arrow-left"></i> -->
+        <img class="sponsor-slide" src="assets/sponsors/sponsor1.png" alt="sponsor1">
         <img class="sponsor-slide" src="assets/sponsors/sponsor2.png" alt="sponsor2">
         <img class="sponsor-slide" src="assets/sponsors/sponsor3.png" alt="sponsor3">
         <img class="sponsor-slide" src="assets/sponsors/sponsor4.png" alt="sponsor4">
         <img class="sponsor-slide" src="assets/sponsors/sponsor5.png" alt="sponsor5">
-        <i class="fa fa-chevron-right fa-lg text-muted sponsor-arrow-right"></i>
+        <img class="sponsor-slide" src="assets/sponsors/sponsor5.png" alt="sponsor5">
+        <!-- <i class="fa fa-chevron-right fa-lg text-muted sponsor-arrow-right"></i> -->
     </footer>
 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="app.js"></script>
 </body>
 
