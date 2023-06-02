@@ -22,8 +22,11 @@ searchIcon.addEventListener("click", () => {
 });
 
 iconToogleMenu.addEventListener("click", toogleMenu);
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", toogleMenu);
+
+if (menu.style.left == "0px") {
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", toogleMenu);
+    }
 }
 
 function toogleMenu() {
@@ -57,13 +60,21 @@ $('#akt-slider').slick({
     slidesToShow: 4,
     arrows: true,
     prevArrow: '<i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i>',
-    nextArrow: '<i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>'
+    nextArrow: '<i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>',
+    responsive: [
+        {
+            breakpoint: 770,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+
 });
 
 $('#kontakty').slick({
     infinite: true,
     slidesToShow: 3,
-    dots: true,
     autoplay: true,
     arrows: false,
     responsive: [
@@ -83,71 +94,9 @@ $('#sponsors-slider').slick({
     infinite: true,
     slidesToShow: 5,
     arrows: true,
+    variableWidth: true,
     prevArrow: '<i class="fa fa-chevron-left fa-lg text-muted arrow-left"></i>',
     nextArrow: '<i class="fa fa-chevron-right fa-lg text-muted arrow-right"></i>'
 });
 
 toogleMenu();
-
-
-let kontakt = 1;
-kontaktLeft.addEventListener("click", () => {
-    kontakt--;
-    if (kontakt < 1) {
-        kontakt = 3;
-    }
-    changeKontakt();
-});
-kontaktRight.addEventListener("click", () => {
-    kontakt++;
-    if (kontakt > 3) {
-        kontakt = 1;
-    }
-    changeKontakt();
-});
-
-
-function changeKontakt() {
-    switch (kontakt) {
-        case 1:
-            kontaktDiv.innerHTML = `
-                <p class="kontakt-nazwa">SIMPLE S.A.</p>
-                <p class="kontakt-adres">ul. Bronisława Czecha 49/51 <br> 04-555 Warszawa</p>
-                <p class="kontakt-telefon">tel.:(22)812-58-98 <br> fax.:(22)815-49-83</p>
-                <p class="kontakt-email">simple@simple.com.pl</p>`
-            break;
-        case 2:
-            kontaktDiv.innerHTML = `
-                <p class="kontakt-nazwa">SIMPLE S.A. - Ośrodek Badawczo - rozwojowy Lublin</p>
-                <p class="kontakt-adres">ul. Wolska 11A/4 <br> 20-411 Lublin</p>
-                <p class="kontakt-telefon">tel. kom: +48 696 001 286</p>
-                <p class="kontakt-email">lublin@simple.com.pl</p>`
-            break;
-        case 3:
-            kontaktDiv.innerHTML = `
-                <p class="kontakt-nazwa">SIMPLE S.A. - oddział Rzeszów</p>
-                <p class="kontakt-adres">ul. Rejtana 53A <br> 35-326 Rzeszów</p>
-                <p class="kontakt-telefon">tel. kom.: +48 696 001 235 <br> fax.: (17)865 42 41</p>
-                <p class="kontakt-email">rzeszow@simple.com.pl</p>`
-            break;
-        default:
-            break;
-    }
-
-}
-
-let sponsor = 1;
-sponsorLeft.addEventListener("click", () => {
-    sponsor--;
-    if (sponsor < 1) {
-        sponsor = 5;
-    }
-    mobileSlide.src = `assets/sponsors/sponsor${sponsor}.png`;
-})
-sponsorRight.addEventListener("click", () => {
-    sponsor++;
-    if (sponsor > 5) {
-        sponsor = 1;
-    }
-    mobileSlide.src = `assets/sponsors/sponsor${sponsor}.png`;
-})
